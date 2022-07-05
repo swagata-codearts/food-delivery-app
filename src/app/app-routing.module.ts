@@ -6,14 +6,19 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },  {
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },  {
+    path: 'slider',
+    loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
   },
+
 
 ];
 

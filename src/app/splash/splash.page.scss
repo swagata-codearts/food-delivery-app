@@ -1,0 +1,18 @@
+ion-content{
+    --background: #fdcb00;
+    @keyframes slide-top{0%{transform:translateY(0)}100%{transform:translateY(-100px)}}
+    .custom-splash-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 100vh;
+        
+        img{
+            width: 60%;
+            animation:slide-top 1s cubic-bezier(.25,.46,.45,.94) both;
+            margin-top: 160px;
+
+        }
+    }
+}
