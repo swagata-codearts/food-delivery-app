@@ -1,3 +1,13 @@
 ion-content    {
-    --background: #000;
+    --background: #fdcb00;
+}
+
+.container {
+    
+        animation: rotate-center 0.6s ease-in-out both;
+    
+    img {
+        height: 180px;
+        margin-top: 73%;
+    }
 }
