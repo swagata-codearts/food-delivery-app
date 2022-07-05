@@ -28,4 +28,12 @@ ion-content{
         --bullet-background: #c0cd82;
         --bullet-background-active: #fdcb00;
      }
+     ion-grid{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        bottom: 40px;
+        width: 100%;
+        z-index: 999;
+     }
 }
