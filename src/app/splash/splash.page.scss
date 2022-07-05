@@ -5,9 +5,12 @@ ion-content    {
 .container {
     
         animation: rotate-center 0.6s ease-in-out both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     
     img {
-        height: 180px;
-        margin-top: 73%;
+        width: 60%;
     }
 }
