@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AlertController, ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,8 @@ export class RegisterPage implements OnInit {
     private api: ApiService,
     private fb: FormBuilder,
     private alertCtrl: AlertController,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private router:Router
   ) {
   }
  
@@ -40,6 +42,7 @@ export class RegisterPage implements OnInit {
             duration: 3000
           });
           toast.present();
+          this.router.navigateByUrl('login');
       },
       err => {
         this.showError(err);
