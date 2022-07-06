@@ -29,7 +29,26 @@ border-radius: 5px;
         height: 35px;
       
       }
+
+      
 }
+.forgot-password  {
+    text-align: right;
+
+    a   {
+        width: 100%;
+        font-size: 14px;
+        color: #5e5e5e;
+        text-transform: capitalize;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            color: #111111;
+        }
+    }
+  }
 ion-text a {
     color: #000;
     text-decoration: none;
