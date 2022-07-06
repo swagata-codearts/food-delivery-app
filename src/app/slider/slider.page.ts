@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderPage implements OnInit {
 
+  slideOpts = {
+    autoplay:true,
+  };
+
   constructor() { }
 
+  
+
   ngOnInit() {
+    
   }
+  
 
 }
