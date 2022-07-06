@@ -33,12 +33,16 @@ export class LoginPage implements OnInit {
 
   login() {
     this.api.signIn(this.userForm.value.username, this.userForm.value.password).subscribe(
+
       async res => {
         const toast = await this.toastController.create({
           message: 'Logged in successfully!',
           duration: 2000
         });
         toast.present();
+        this.storage.set("token",res.token);
+        this.router.navigateByUrl('home');
+
       },
       err => {
         this.showError(err);
