@@ -9,16 +9,17 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(
-    public platform: Platform,
-    public router: Router
-  ) {
+    private platform:Platform,
+    public router: Router,
+  ) 
+  {
     this.initializeApp();
   }
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.router.navigateByUrl('splash')
+  initializeApp(){
+    this.platform.ready().then(()=>{
+      this.router.navigateByUrl('splash');
     })
-    
   }
+
 }
