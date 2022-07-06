@@ -16,7 +16,7 @@ import { InputModule } from '../components/input/input.module';
     IonicModule,
     InputModule,
     LoginPageRoutingModule,
-    //ReactiveFormsModule
+    ReactiveFormsModule
   ],
   declarations: [LoginPage]
 })

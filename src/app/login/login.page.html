@@ -19,21 +19,22 @@
   </div>
 
   <form [formGroup]="userForm" (ngSubmit)="login()">
+  
+
     <ion-item lines="none">
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input type="text" formControlName="username"></ion-input>
+      <ion-label position="stacked">Email/UserName</ion-label>
+      <ion-input formControlName="username"></ion-input>
     </ion-item>
+   
     <ion-item lines="none">
       <ion-label position="stacked">Password</ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
+
+   
+
+    <ion-button expand="full" [disabled]="!userForm.valid" type="submit">Login</ion-button>
     
-    <ion-item lines="none">
-      <ion-button expand="block" [disabled]="!userForm.valid" type="submit">Login</ion-button>
-    </ion-item>
-    <ion-text>
-      <a [routerLink]="['/register']">Create New Account</a>
-    </ion-text>
-    
+    <ion-button expand="full" type="button" color="tertiary" (click)="openPwReset()">Forgot password?</ion-button>
   </form>
 </ion-content>
