@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://mx2test2.com/restaurant-appwp-json'
+  apiUrl: 'https://mx2test2.com/restaurant-app/wp-json'
 };
 
 /*
