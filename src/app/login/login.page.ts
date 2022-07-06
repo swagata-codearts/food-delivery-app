@@ -16,7 +16,7 @@ export class LoginPage implements OnInit {
     private api: ApiService,
     private fb: FormBuilder,
     private alertCtrl: AlertController,
-    private toastCtrl: ToastController,
+    private toastController: ToastController,
     private storage: Storage
     ) { }
 
@@ -31,8 +31,12 @@ export class LoginPage implements OnInit {
 
   login() {
     this.api.signIn(this.userForm.value.username, this.userForm.value.password).subscribe(
-      res => {
-        console.log(res)
+      async res => {
+        const toast = await this.toastController.create({
+          message: 'Logged in successfully!',
+          duration: 2000
+        });
+        toast.present();
       },
       err => {
         this.showError(err);
@@ -40,7 +44,7 @@ export class LoginPage implements OnInit {
     );
   }
  
- 
+  
 
   async openPwReset() {
     const alert = await this.alertCtrl.create({
@@ -72,7 +76,7 @@ export class LoginPage implements OnInit {
   resetPw(usernameOrEmail) {
     this.api.resetPassword(usernameOrEmail).subscribe(
       async res => {
-        const toast = await this.toastCtrl.create({
+        const toast = await this.toastController.create({
           message: res['message'],
           duration: 2000
         });

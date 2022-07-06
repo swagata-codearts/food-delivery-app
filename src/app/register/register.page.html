@@ -19,8 +19,27 @@
       </span>
   </div>
 
-  <form action="">
 
+  <form [formGroup]="userForm" (ngSubmit)="signUp()">
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    
+    <ion-button expand="full" [disabled]="!userForm.valid" type="button" color="secondary" (click)="signUp()">
+      Register</ion-button>
+  </form>
+
+  <!-- <form action="">
     <ion-item lines="none">
       <ion-label position="stacked">Name</ion-label>
       <ion-input type="text"></ion-input>
@@ -40,6 +59,5 @@
     <ion-item lines="none">
       <ion-button expand="block">Register</ion-button>
     </ion-item>
-    
-  </form>
+  </form> -->
 </ion-content>
