@@ -1,3 +1,4 @@
+
 ion-item    {
     --highlight-background: unset;
     
@@ -7,12 +8,12 @@ ion-item    {
     }
     ion-input   {
         font-size: 18px;
---padding-top: 5px;
---padding-bottom: 5px;
---padding-start: 5px;
-border-radius: 5px;
---background: #eeeeee;
-    box-shadow: 1px 8px 8px 0px rgba( 0 0 0/0.08);
+        --padding-top: 5px;
+        --padding-bottom: 5px;
+        --padding-start: 5px;
+        border-radius: 5px;
+        --background: #eeeeee;
+        box-shadow: 1px 8px 8px 0px rgba( 0 0 0/0.08);
     }
 
     a   {
@@ -26,7 +27,7 @@ border-radius: 5px;
         font-weight: 700;
         border-radius: 8px !important;
         height: 35px;
-      
+        margin-top: 15px;
       }
 }
 
