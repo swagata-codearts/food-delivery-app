@@ -3,7 +3,7 @@ import { ApiService } from '../services/api.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AlertController, ToastController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -17,7 +17,8 @@ export class LoginPage implements OnInit {
     private fb: FormBuilder,
     private alertCtrl: AlertController,
     private toastCtrl: ToastController,
-    private storage: Storage
+    private storage: Storage,
+    public router: Router,
     ) { }
 
   ngOnInit() {
@@ -33,6 +34,8 @@ export class LoginPage implements OnInit {
     this.api.signIn(this.userForm.value.username, this.userForm.value.password).subscribe(
       res => {
         console.log(res)
+        this.storage.set("token",res.token);
+        this.router.navigateByUrl('home');
       },
       err => {
         this.showError(err);
