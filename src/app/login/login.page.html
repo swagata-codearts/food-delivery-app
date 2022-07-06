@@ -31,12 +31,16 @@
       <ion-label position="stacked">Password</ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
-
+    <ion-item class="forgot-password" lines="none">
+      <a expand="full" type="button" color="tertiary" (click)="openPwReset()">Forgot password?</a>
+    </ion-item>
    
-
-    <ion-button expand="full" [disabled]="!userForm.valid" type="submit">Login</ion-button>
+    <ion-item lines="none">
+      <ion-button expand="full" [disabled]="!userForm.valid" type="submit">Login</ion-button>
+    </ion-item>
     
-    <ion-button expand="full" type="button" color="tertiary" (click)="openPwReset()">Forgot password?</ion-button>
+    
+    
   </form>
   <!-- <form action="">
 
