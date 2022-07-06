@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="['/slider']">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <img src="../../assets/dish-yellow.png" alt="">
+    <h2>Good Food</h2>
+    <span class="demo">
+
+      Get delivered at home
+      </span>
+  </div>
+
+  <form action="">
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-button expand="block">Login</ion-button>
+    </ion-item>
+    <ion-text>
+      <a [routerLink]="['/register']">Create New Account</a>
+    </ion-text>
+    
+  </form>
+</ion-content>

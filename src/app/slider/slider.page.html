@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-slides pager="true">
+  <ion-slides pager="true" [options] = "slideOpts">
     <ion-slide>
       <div class="custom-slide-wrap">
         <div class="slide-img">
@@ -35,11 +35,7 @@
     </ion-slide>
   </ion-slides>
   <ion-grid>
-    <ion-button href="home">
-        Log In
-    </ion-button>
-    <ion-button>
-      Register
-  </ion-button>
+    <ion-button [routerLink]="['/login']">Log In</ion-button>
+    <ion-button [routerLink]="['/register']">Register</ion-button>
   </ion-grid>
 </ion-content>
