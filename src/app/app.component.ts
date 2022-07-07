@@ -19,7 +19,7 @@ export class AppComponent {
 
   initializeApp(){
     this.storage.create()
-    this.storage.clear()
+    // this.storage.clear()
     this.platform.ready().then(()=>{
       
       this.router.navigateByUrl('splash');
