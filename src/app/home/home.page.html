@@ -20,8 +20,7 @@
       <ion-row>
         <ion-col>
           <h4>Categories</h4>
-        </ion-col>        
-        
+        </ion-col>       
         <ion-row>
           <ion-col>
             <ion-list>
@@ -52,22 +51,20 @@
             </ion-list>
           </ion-col>
         </ion-row>
-
         <div class="custom-categories-content">
-          <ion-item *ngIf="showCategory == 1">
-            <p>All</p>
+          <ion-item *ngIf="showCategory == 1" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
           </ion-item>
-          <ion-item *ngIf="showCategory == 2">
-            <p>Lunch</p>
+          <ion-item *ngIf="showCategory == 2" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
           </ion-item>
-          <ion-item *ngIf="showCategory == 3">
-            <p>Dinner</p>
+          <ion-item *ngIf="showCategory == 3" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
           </ion-item>
-          <ion-item *ngIf="showCategory == 4">
-            <p>Dessert</p>
+          <ion-item *ngIf="showCategory == 4" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
           </ion-item>
         </div>
       </ion-row>
-      
     </section>  
 </ion-content>
