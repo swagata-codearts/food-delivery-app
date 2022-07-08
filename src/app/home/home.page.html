@@ -25,31 +25,25 @@
         <ion-row>
           <ion-col>
             <ion-list>
-              <ion-item lines="none" class="ion-no-padding" (click)="onAllClick()" >
+              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(1)" >
                 <div class="cus-categorr-single-wrap">
                     <img src="../../../assets/cat-img-1.png" alt="">
                     <h6>All</h6>
                 </div>
             </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="onLunchClick()">
+              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(2)">
                   <div class="cus-categorr-single-wrap">
                       <img src="../../../assets/cat-img-1.png" alt="">
                       <h6>Lunch</h6>
                   </div>
               </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="onDinnerClick()">
+              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(3)">
                 <div class="cus-categorr-single-wrap">
                     <img src="../../../assets/cat-img-2.png" alt="">
                     <h6>Dinner</h6>
                 </div>
               </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="onFastFoodClick()">
-                <div class="cus-categorr-single-wrap">
-                    <img src="../../../assets/cat-img-3.png" alt="">
-                    <h6>Fast Food</h6>
-                </div>
-              </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="onDessertClick()">
+              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(4)">
                 <div class="cus-categorr-single-wrap">
                     <img src="../../../assets/cat-img-4.png" alt="">
                     <h6>Dessert</h6>
@@ -60,19 +54,16 @@
         </ion-row>
 
         <div class="custom-categories-content">
-          <ion-item *ngIf="allClicked">
+          <ion-item *ngIf="showCategory == 1">
             <p>All</p>
           </ion-item>
-          <ion-item *ngIf="lunchClicked">
+          <ion-item *ngIf="showCategory == 2">
             <p>Lunch</p>
           </ion-item>
-          <ion-item *ngIf="dinnerClicked">
+          <ion-item *ngIf="showCategory == 3">
             <p>Dinner</p>
           </ion-item>
-          <ion-item *ngIf="fastFoodClicked">
-            <p>Fast Food</p>
-          </ion-item>
-          <ion-item *ngIf="dessertClicked">
+          <ion-item *ngIf="showCategory == 4">
             <p>Dessert</p>
           </ion-item>
         </div>

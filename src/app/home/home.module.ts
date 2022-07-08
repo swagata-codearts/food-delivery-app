@@ -6,12 +6,6 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { OfferPosterComponent } from '../components/offer-poster/offer-poster.component';
-import { CategoriesComponent } from '../components/categories/categories.component';
-import { AllMenuComponent } from '../components/categories/all-menu/all-menu.component';
-import { LunchMenuComponent } from '../components/categories/lunch-menu/lunch-menu.component';
-import { DinnerMenuComponent } from '../components/categories/dinner-menu/dinner-menu.component';
-import { FastFoodMenuComponent } from '../components/categories/fast-food-menu/fast-food-menu.component';
-import { DessertMenuComponent } from '../components/categories/dessert-menu/dessert-menu.component';
 
 
 
@@ -24,13 +18,7 @@ import { DessertMenuComponent } from '../components/categories/dessert-menu/dess
   ],
   declarations: [
     HomePage,
-    OfferPosterComponent,
-    CategoriesComponent,
-    AllMenuComponent,
-    LunchMenuComponent,
-    DinnerMenuComponent,
-    FastFoodMenuComponent,
-    DessertMenuComponent
+    OfferPosterComponent
     
 
   ]
