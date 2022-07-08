@@ -11,8 +11,6 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {}
 
-  public onButtonClick(){
-    
-  }
+  
 
 }
