@@ -8,16 +8,19 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { OfferPosterComponent } from '../components/offer-poster/offer-poster.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
   declarations: [
     HomePage,
     OfferPosterComponent
+    
+
   ]
 })
 export class HomePageModule {}
