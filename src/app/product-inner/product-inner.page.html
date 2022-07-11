@@ -6,10 +6,44 @@
       </ion-button>
       <ion-text><h5>Product Name</h5></ion-text>
     </ion-buttons>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-row>
+    <ion-col class="ion-no-padding">
+      <div class="product-inner-img">
+        <img src="../../assets/chicken.jpg" >
+      </div> 
+      <div class="product-inner-text">
+        <ion-title>
+          <h2>Chettinad chicken gravy</h2>
+        </ion-title>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, ab.</p>
+      </div>
+      <div class="product-additionals">
+        <h4>Additional information</h4>
+        <ion-item>
+          <ion-label>Dry</ion-label>
+          <ion-radio value="dry"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Gravy</ion-label>
+          <ion-radio value="gravy"></ion-radio>
+        </ion-item>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="product-count-row">
+    <ion-col size="5">
+      <ion-buttons class="product-count">
+        <ion-button class="product-count-add">-</ion-button>
+        <span class="product-count-number">1</span>
+        <ion-button class="product-count-reduce">+</ion-button>
+      </ion-buttons>
+    </ion-col>
+    <ion-col size="7">
+      <ion-button expand="full">Add <span>$65</span></ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
