@@ -15,7 +15,7 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    HomePageRoutingModule
   ],
   declarations: [
     HomePage,
