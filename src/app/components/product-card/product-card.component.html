@@ -1,7 +1,7 @@
 <ion-card>
  
-  <img src="../../../assets/chicken.jpg" alt="ion">
-  <ion-card-header>
+  <img src="../../../assets/chicken.jpg" alt="ion" [routerLink]="['/product-inner']">
+  <ion-card-header [routerLink]="['/product-inner']">
     <ion-card-title>
 
       Chettinad chicken gravy
@@ -10,7 +10,7 @@
   <ion-card-content>
     <ion-row>
       <h5>$65</h5>
-      <ion-button>+</ion-button>
+      <ion-button [routerLink]="['/cart']">+</ion-button>
     </ion-row>
   </ion-card-content>
 </ion-card>

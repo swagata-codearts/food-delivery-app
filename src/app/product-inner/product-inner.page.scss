@@ -1,0 +1,38 @@
+ion-toolbar {
+    // --background: url('../../assets/chicken.jpg');
+    // padding-bottom: 350px;
+}
+
+ion-content {
+    .product-inner-text {
+        padding: 0 10px;
+        ion-title  {
+            padding: 0 ;
+    
+            h2  {
+                font-size: 22px;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        ion-text    {
+            
+        }
+      }
+      .product-additionals {
+
+          h4 {
+            font-size: 18px;
+            padding: 0 10px;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+      }
+      .product-count-row    {
+        align-items: center;
+        .product-count {
+          justify-content: space-between;
+          background-color: #eaeaea;
+        }
+      }
+}

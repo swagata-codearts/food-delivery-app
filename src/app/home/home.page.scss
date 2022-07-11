@@ -19,6 +19,7 @@ ion-list{
   padding: 0;
 
   ion-item{
+    
       .cus-categorr-single-wrap{
           h6{
               font-size: 12px;
@@ -32,6 +33,14 @@ ion-list{
           }
       }
   }
+ 
+}
+
+.custom-categories-content  {
+  ion-item  {
+      --inner-padding-end: 0px !important;
+    }
+  
 }
 
 
