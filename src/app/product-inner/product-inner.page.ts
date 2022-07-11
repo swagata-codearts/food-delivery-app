@@ -15,7 +15,6 @@ export class ProductInnerPage implements OnInit {
   }
   
   public increment () {
-   
     this.currentNumber++;
     this.updatedProductPrice = this.currentNumber * this.productPrice
   }
