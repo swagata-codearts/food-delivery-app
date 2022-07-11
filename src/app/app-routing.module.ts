@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'product-inner',
     loadChildren: () => import('./product-inner/product-inner.module').then( m => m.ProductInnerPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
 
 
 
