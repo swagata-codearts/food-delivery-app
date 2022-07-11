@@ -37,13 +37,17 @@
   <ion-row class="product-count-row">
     <ion-col size="5">
       <ion-buttons class="product-count">
-        <ion-button class="product-count-add">-</ion-button>
-        <span class="product-count-number">1</span>
-        <ion-button class="product-count-reduce">+</ion-button>
+        <ion-button class="product-count-reduce" (click)="decrement()" [disabled]="currentNumber === 0">
+          <ion-icon name="remove" ></ion-icon>
+        </ion-button>
+        <span class="product-count-number">{{currentNumber}}</span>
+        <ion-button class="product-count-add" (click)="increment()">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
       </ion-buttons>
     </ion-col>
     <ion-col size="7">
-      <ion-button expand="full">Add <span>$65</span></ion-button>
+      <ion-button expand="full">Add <span class="product-price" >${{updatedProductPrice}}</span></ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
