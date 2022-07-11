@@ -40,6 +40,15 @@ ion-content {
         .product-count {
           justify-content: space-between;
           background-color: #eaeaea;
+          border-radius: 6px;
+height: 36px;
+          .product-count-add,
+          .product-count-reduce {
+            background-color: #cecece;
+            height: 36px;
+            margin: 0;
+          }
+
         }
       }
 }
