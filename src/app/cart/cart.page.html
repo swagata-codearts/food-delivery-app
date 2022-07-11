@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cart</ion-title>
+    <ion-buttons slot="start" [routerLink]="['/product-inner']">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-text><h5>Cart</h5></ion-text>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
