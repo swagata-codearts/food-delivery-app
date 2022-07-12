@@ -10,70 +10,77 @@
 
   <!-- HOME_OFFER_BANNER -->
 
-    <section class="offer-banners-wrap">
-      <app-offer-poster></app-offer-poster>
-    </section>
+  <section class="offer-banners-wrap">
+    <app-offer-poster></app-offer-poster>
+  </section>
 
-  <!-- HOME_CATEGORIES -->  
+  <!-- HOME_CATEGORIES -->
 
-    <section class="cus-categories">
+  <section class="cus-categories">
+    <ion-row>
+      <ion-col>
+        <h4>Categories</h4>
+      </ion-col>
+    </ion-row>
       <ion-row>
         <ion-col>
-          <h4>Categories</h4>
-        </ion-col>        
-        
-        <ion-row>
-          <ion-col>
-            <ion-list>
-              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(1)" >
-                <div class="cus-categorr-single-wrap">
-                    <img src="../../../assets/cat-img-1.png" alt="">
-                    <h6>All</h6>
-                </div>
+          <ion-list>
+            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(1)">
+              <div class="cus-categorr-single-wrap">
+                <img src="../../../assets/cat-img-1.png" alt="">
+                <h6>All</h6>
+              </div>
             </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(2)">
-                  <div class="cus-categorr-single-wrap">
-                      <img src="../../../assets/cat-img-1.png" alt="">
-                      <h6>Lunch</h6>
-                  </div>
-              </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(3)">
-                <div class="cus-categorr-single-wrap">
-                    <img src="../../../assets/cat-img-2.png" alt="">
-                    <h6>Dinner</h6>
-                </div>
-              </ion-item>
-              <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(4)">
-                <div class="cus-categorr-single-wrap">
-                    <img src="../../../assets/cat-img-4.png" alt="">
-                    <h6>Dessert</h6>
-                    
-                </div>
-              </ion-item>
-            </ion-list>
-          </ion-col>
+            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(2)">
+              <div class="cus-categorr-single-wrap">
+                <img src="../../../assets/cat-img-1.png" alt="">
+                <h6>Lunch</h6>
+              </div>
+            </ion-item>
+            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(3)">
+              <div class="cus-categorr-single-wrap">
+                <img src="../../../assets/cat-img-2.png" alt="">
+                <h6>Dinner</h6>
+              </div>
+            </ion-item>
+            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(4)">
+              <div class="cus-categorr-single-wrap">
+                <img src="../../../assets/cat-img-4.png" alt="">
+                <h6>Dessert</h6>
 
-        </ion-row>        
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-col>
 
+      </ion-row>
+      <ion-row>
         <div class="custom-categories-content">
-          <ion-item *ngIf="showCategory == 1" lines="none" class="ion-no-padding">
+          <ion-list *ngIf="showCategory == 1" lines="none" class="ion-no-padding">
             <app-product-card></app-product-card>
             <app-product-card></app-product-card>
-          </ion-item>
-          <ion-item *ngIf="showCategory == 2" lines="none" class="ion-no-padding">
             <app-product-card></app-product-card>
             <app-product-card></app-product-card>
-          </ion-item>
-          <ion-item *ngIf="showCategory == 3" lines="none" class="ion-no-padding">
             <app-product-card></app-product-card>
             <app-product-card></app-product-card>
-          </ion-item>
-          <ion-item *ngIf="showCategory == 4" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
+          </ion-list>
+          <ion-list *ngIf="showCategory == 2" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
+          </ion-list>
+          <ion-list *ngIf="showCategory == 3" lines="none" class="ion-no-padding">
             <app-product-card></app-product-card>
             <app-product-card></app-product-card>
-          </ion-item>
+          </ion-list>
+          <ion-list *ngIf="showCategory == 4" lines="none" class="ion-no-padding">
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+          </ion-list>
         </div>
       </ion-row>
       
-    </section>  
+    
+
+  </section>
+  <!-- <app-tabs></app-tabs> -->
 </ion-content>

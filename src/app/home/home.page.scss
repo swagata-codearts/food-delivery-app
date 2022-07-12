@@ -37,8 +37,11 @@ ion-list{
 }
 
 .custom-categories-content  {
-  ion-item  {
-      --inner-padding-end: 0px !important;
+  ion-list  {
+      flex-wrap: wrap;
+      app-product-card{
+        flex: 1 1 50%;
+      }
     }
   
 }

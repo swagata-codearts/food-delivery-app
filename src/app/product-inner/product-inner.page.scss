@@ -6,17 +6,21 @@ ion-toolbar {
 ion-content {
     .product-inner-text {
         padding: 0 10px;
+        margin-top: 15px;
         ion-title  {
             padding: 0 ;
     
             h2  {
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 500;
                 margin: 0;
+                text-transform: capitalize;
             }
         }
-        ion-text    {
-            
+        p {
+          font-size: 15px;
+          color: #6d6d6d;
+          margin: 7px 0;
         }
       }
       .product-additionals {
@@ -30,9 +34,20 @@ ion-content {
       }
       .product-count-row    {
         align-items: center;
+        position: fixed;
+        width: 100%;
+        bottom: 20px;
         .product-count {
           justify-content: space-between;
           background-color: #eaeaea;
+          border-radius: 6px;
+          height: 36px;
+          .product-count-add,
+          .product-count-reduce {
+            background-color: #cecece;
+            height: 36px;
+            margin: 0;
+          }
         }
       }
 }
