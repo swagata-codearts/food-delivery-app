@@ -7,7 +7,9 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { OfferPosterComponent } from '../components/offer-poster/offer-poster.component';
 import { ProductCardComponent } from '../components/product-card/product-card.component';
+import { TabsComponent } from '../components/tabs/tabs.component';
 
+import { Routes } from '@angular/router';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
   declarations: [
     HomePage,
     OfferPosterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    TabsComponent
     
 
   ],
@@ -29,4 +32,6 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
   ]
   
 })
+
+
 export class HomePageModule {}
