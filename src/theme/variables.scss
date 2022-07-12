@@ -234,14 +234,29 @@
     --ion-card-background: #1e1e1e;
   }
 }
-ion-content {
-  width: calc(100% + 15px);
-}
-ion-content::part(scroll) {
-  padding-right: 0px;
-}
+
 app-tabs{
   position: fixed;
   width: 100%;
   bottom: 0;
 }
+
+ion-content {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  --background: #fff;
+  overflow: auto;
+
+  &::part(background) {
+    bottom: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+  }
+}
+
+
+
+
