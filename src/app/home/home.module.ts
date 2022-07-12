@@ -9,7 +9,7 @@ import { OfferPosterComponent } from '../components/offer-poster/offer-poster.co
 import { ProductCardComponent } from '../components/product-card/product-card.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
 
-import { Routes } from '@angular/router';
+
 
 
 @NgModule({
