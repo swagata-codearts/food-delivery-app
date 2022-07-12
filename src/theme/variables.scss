@@ -240,3 +240,8 @@ ion-content {
 ion-content::part(scroll) {
   padding-right: 0px;
 }
+app-tabs{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
