@@ -1,0 +1,20 @@
+.profile-row {
+    align-items: center;
+    margin-top: 12px;
+
+.profile-image img {
+    border-radius: 50%;
+  }
+  .user-name {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+  .user-email {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #515151;
+  }
+}
