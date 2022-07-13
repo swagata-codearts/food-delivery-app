@@ -40,7 +40,11 @@ export class LoginPage implements OnInit {
           duration: 2000
         });
         toast.present();
+        console.log(res)
         this.storage.set("token",res.token);
+        this.storage.set("user_nicename",res.user_nicename);
+        this.storage.set("user_email",res.user_email);
+        this.storage.set("user_display_name",res.user_display_name);
         this.router.navigateByUrl('home');
 
       },
