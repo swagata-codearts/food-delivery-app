@@ -2,9 +2,9 @@
  
   <img src="../../../assets/chicken.jpg" alt="ion" [routerLink]="['/product-inner']">
   <ion-card-header [routerLink]="['/product-inner']">
-    <ion-card-title>
+    <ion-card-title *ngFor="let item of items">
 
-      Chettinad chicken gravy
+      {{ item.value }}
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>

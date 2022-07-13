@@ -28,4 +28,5 @@ export class ProductInnerPage implements OnInit {
     }
   }
   
+  
 }
