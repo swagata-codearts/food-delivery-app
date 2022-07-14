@@ -96,4 +96,28 @@
 
     </ion-col>
   </ion-row>
+  <div class="custom-cart-total">
+    <ion-row>
+      <ion-col size="6"><div class="total-text">Total</div></ion-col>
+      <ion-col  size="6"><div class="total-ammount">$200</div></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6"><div class="delivery-add">Delivery</div></ion-col>
+      <ion-col ion-no-padding  size="6">
+        <div class="custom-delivery-select" right>
+          <ion-list class="ion-no-padding">
+            <ion-item class="ion-no-padding">
+              <ion-select class="ion-no-padding" placeholder="Select Address" interface="popover">
+                <ion-select-option value="apples">Home</ion-select-option>
+                <ion-select-option value="oranges">Office</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
 </ion-content>
+<app-tabs></app-tabs>
