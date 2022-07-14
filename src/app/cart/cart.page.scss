@@ -47,4 +47,25 @@ ion-content{
         
         
     }
+    .custom-cart-total{
+        position: fixed;
+        width: 100%;
+        bottom: 70px;
+        .total-ammount{
+            text-align: right;
+            
+        }
+        .custom-delivery-select{
+            ion-list{
+                ion-item{
+                    float: right;
+                    &::part(native){
+                        min-height: 20px;
+                        height: 20px;
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
