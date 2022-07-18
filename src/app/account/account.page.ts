@@ -14,12 +14,12 @@ export class AccountPage implements OnInit {
       this.storage.create();
       this.storage.get("user_nicename").then(val=>{
         // this.storage.user_name
-        if(val){
-          this.router.navigateByUrl('home');
-        }
-        else{ 
-          this.router.navigateByUrl('slider');
-        }
+        // if(val){
+        //   this.router.navigateByUrl('home');
+        // }
+        // else{ 
+        //   this.router.navigateByUrl('slider');
+        // }
     })
       
     });
