@@ -124,6 +124,11 @@
         <ion-button id="open-modal" expand="block">Checkout</ion-button>
       </div>
     </ion-row>
+    <ion-row>
+      <div class="custom-cart-btns" ion-no-padding>
+        <ion-button id="" expand="block" color="secondary" [routerLink]="['/add-address']">Add Address</ion-button>
+      </div>
+    </ion-row>
   </div>
   <ion-modal #modal trigger="open-modal">
     <ng-template>

@@ -4,20 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CartPageRoutingModule } from './cart-routing.module';
+import { AddAddressPageRoutingModule } from './add-address-routing.module';
 
-import { CartPage } from './cart.page';
-import { TabsComponent } from '../components/tabs/tabs.component';
+import { AddAddressPage } from './add-address.page';
 import { AddressComponent } from '../components/address/address.component';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartPageRoutingModule
+    AddAddressPageRoutingModule
   ],
-  declarations: [CartPage,TabsComponent,AddressComponent]
+  declarations: [AddAddressPage, AddressComponent]
 })
-export class CartPageModule {}
+export class AddAddressPageModule {}
