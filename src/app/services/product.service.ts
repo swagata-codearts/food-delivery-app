@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
   url = 'https://mx2test2.com/restaurant-app';
-  consumerKey = 'ck_6e88fb0858ae5c80b620db78fa6a2ad222ddaa7c';
-  consumerSecret = 'cs_dec72fc08f0fea22622cf290cb6cf9d106d060d6';
+  consumerKey = 'ck_f0764f5201c54cdfb97faf8c05737e651d7ca1cc';
+  consumerSecret = 'cs_b1845b5227d68c536a1e796cafab60134496214b';
   
  
 
@@ -16,5 +16,20 @@ export class ProductService {
     return this.http.get(`${this.url}/wp-json/wc/v3/products?consumer_key=${
       this.consumerKey
     }&consumer_secret=${this.consumerSecret}`);
+  }
+
+  getCategroies(){
+    return this.http.get(`${this.url}/wp-json/wc/v3/products/categories?consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}`);
+  }
+
+  getProductsByCats(id){
+    let cat_id = id;
+
+    return this.http.get(`${this.url}/wp-json/wc/v3/products?category=${cat_id}&consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}`);
+
   }
 }

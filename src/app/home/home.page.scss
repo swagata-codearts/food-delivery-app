@@ -53,3 +53,25 @@ ion-list{
 //   padding-right: 0px;
 // }
 
+ion-card    {
+
+  ion-card-header {
+      padding: 8px 11px;
+      ion-card-title {
+          font-size: 12px;
+          font-weight: 600;
+        }
+  }
+    ion-card-content {
+      padding: 0px 11px 11px !important;
+      ion-row {
+        align-items: center;
+        justify-content: space-between;
+        h5 {
+          font-size: 14px !important;
+          color: #007a00;
+          font-weight: 500 !important;
+        }
+      }
+    }
+}

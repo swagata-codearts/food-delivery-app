@@ -31,25 +31,13 @@
                 <h6>All</h6>
               </div>
             </ion-item>
-            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(2)">
-              <div class="cus-categorr-single-wrap">
+            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(item.id)" *ngFor="let item of cats;let i=index">
+              <div class="cus-categorr-single-wrap" *ngIf="item.name != 'Uncategorized'">
                 <img src="../../../assets/cat-img-1.png" alt="">
-                <h6>Lunch</h6>
+                <h6>{{item.name}}</h6>
               </div>
             </ion-item>
-            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(3)">
-              <div class="cus-categorr-single-wrap">
-                <img src="../../../assets/cat-img-2.png" alt="">
-                <h6>Dinner</h6>
-              </div>
-            </ion-item>
-            <ion-item lines="none" class="ion-no-padding" (click)="categoryClick(4)">
-              <div class="cus-categorr-single-wrap">
-                <img src="../../../assets/cat-img-4.png" alt="">
-                <h6>Dessert</h6>
-
-              </div>
-            </ion-item>
+           
           </ion-list>
         </ion-col>
 
@@ -57,25 +45,34 @@
       <ion-row>
         <div class="custom-categories-content">
           <ion-list *ngIf="showCategory == 1" lines="none" class="ion-no-padding">
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
+            <ion-card *ngFor="let item of products">
+              <img src="{{item.images[0].src}}" alt="ion" [routerLink]="['/product-inner']">
+              <ion-card-header [routerLink]="['/product-inner']">
+                <ion-card-title>{{item.name}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-row>
+                  <h5>RS {{item.price}}</h5>
+                  <ion-button [routerLink]="['/cart']">+</ion-button>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
           </ion-list>
           <ion-list *ngIf="showCategory == 2" lines="none" class="ion-no-padding">
-            <app-product-card></app-product-card>
+            <ion-card *ngFor="let item of productsBycat">
+              <img src="{{item.images[0].src}}" alt="ion" [routerLink]="['/product-inner']">
+              <ion-card-header [routerLink]="['/product-inner']">
+                <ion-card-title>{{item.name}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-row>
+                  <h5>RS {{item.price}}</h5>
+                  <ion-button [routerLink]="['/cart']">+</ion-button>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
           </ion-list>
-          <ion-list *ngIf="showCategory == 3" lines="none" class="ion-no-padding">
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-          </ion-list>
-          <ion-list *ngIf="showCategory == 4" lines="none" class="ion-no-padding">
-            <app-product-card></app-product-card>
-            <app-product-card></app-product-card>
-          </ion-list>
+          
         </div>
       </ion-row>
       

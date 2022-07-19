@@ -1,15 +1,12 @@
-<ion-card>
+<ion-card *ngFor="let item of products">
  
-  <img src="../../../assets/chicken.jpg" alt="ion" [routerLink]="['/product-inner']">
+  <img src="{{item.images[0].src}}" alt="ion" [routerLink]="['/product-inner']">
   <ion-card-header [routerLink]="['/product-inner']">
-    <ion-card-title>
-
-      Chettinad chicken gravy
-    </ion-card-title>
+    <ion-card-title>{{item.name}}</ion-card-title>
   </ion-card-header>
   <ion-card-content>
     <ion-row>
-      <h5>$65</h5>
+      <h5>RS {{item.price}}</h5>
       <ion-button [routerLink]="['/cart']">+</ion-button>
     </ion-row>
   </ion-card-content>
