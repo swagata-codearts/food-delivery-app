@@ -16,7 +16,7 @@ export class AddressComponent implements OnInit {
   long:any;
   @ViewChild('mapElement', {static: false}) mapElement;
   public formattedAddress;
-
+  address: any;
   constructor(private productService:ProductService,private geolocation: Geolocation) { }
 
   ngOnInit() {}
