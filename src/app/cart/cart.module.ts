@@ -8,7 +8,6 @@ import { CartPageRoutingModule } from './cart-routing.module';
 
 import { CartPage } from './cart.page';
 import { TabsComponent } from '../components/tabs/tabs.component';
-import { AddressComponent } from '../components/address/address.component';
 
 
 @NgModule({
@@ -18,6 +17,6 @@ import { AddressComponent } from '../components/address/address.component';
     IonicModule,
     CartPageRoutingModule
   ],
-  declarations: [CartPage,TabsComponent,AddressComponent]
+  declarations: [CartPage,TabsComponent]
 })
 export class CartPageModule {}
