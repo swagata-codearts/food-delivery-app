@@ -1,4 +1,6 @@
 <div #mapElement class="map"></div>
   <h2>Address:</h2>
-  <ion-textarea value="{{formattedAddress}}"></ion-textarea>
-  <ion-button>Add</ion-button>
+  <form (ngSubmit)="saveAddress()">
+    <ion-textarea value="{{formattedAddress}}" type="text" formControlName="address"></ion-textarea>
+    <ion-button type="submit">Save</ion-button>
+  </form>

@@ -118,7 +118,7 @@
     </ion-row>
     <ion-row>
       <div class="custom-cart-btns" ion-no-padding>
-        <ion-button id="open-modal" expand="block">Checkout</ion-button>
+        <ion-button id="open-modal" expand="block" (click)="presentAlert()">Checkout</ion-button>
       </div>
     </ion-row>
     <ion-row>
@@ -127,53 +127,30 @@
       </div>
     </ion-row>
   </div>
-  <ion-modal #modal trigger="open-modal">
+  <!-- <ion-modal #modal trigger="open-modal">
     <ng-template>
         <ion-toolbar>
-          <ion-title>Modal</ion-title>
+          <ion-buttons slot="start">
+            <ion-button color="light">Move to Checkout?</ion-button>
+          </ion-buttons>
           <ion-buttons slot="end">
-            <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+            <ion-button color="light" (click)="modal.dismiss()" >Close</ion-button>
           </ion-buttons>
         </ion-toolbar>
         <ion-list>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h2>Connor Smith</h2>
-              <p>Sales Rep</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h2>Daniel Smith</h2>
-              <p>Product Designer</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h2>Greg Smith</h2>
-              <p>Director of Operations</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h2>Zoey Smith</h2>
-              <p>CEO</p>
-            </ion-label>
-          </ion-item>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio value="yes" (click)="redirectCheckout()"></ion-radio>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+          
         </ion-list>
     </ng-template>
-  </ion-modal>
+  </ion-modal> -->
 </ion-content>
 <app-tabs></app-tabs>

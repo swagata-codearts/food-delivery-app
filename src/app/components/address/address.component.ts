@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 import { ProductService } from 'src/app/services/product.service';
 declare const google;
@@ -16,7 +17,9 @@ export class AddressComponent implements OnInit {
   long:any;
   @ViewChild('mapElement', {static: false}) mapElement;
   public formattedAddress;
+  private storage: Storage;
   address: any;
+  addressForm: FormGroup;
   constructor(private productService:ProductService,private geolocation: Geolocation) { }
 
   ngOnInit() {}
@@ -60,4 +63,8 @@ export class AddressComponent implements OnInit {
     });
   }
 
+   saveAddress() {
+    this.formattedAddress.saveAddress(this.addressForm.value.address).subscribe(
+      async res => {})
+  }
 }

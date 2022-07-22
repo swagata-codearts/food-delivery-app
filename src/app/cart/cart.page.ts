@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cart',
@@ -11,11 +12,12 @@ export class CartPage implements OnInit {
   public productPrice = 200;
 
   productUpdatePrice = this.productPrice;
+  roleMessage: '';
 
 
 
 
-  constructor() { }
+  constructor(public router: Router, private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -35,4 +37,30 @@ export class CartPage implements OnInit {
     
   }
 
+  redirectCheckout() {
+    this.router.navigateByUrl('checkout');
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Proceed to checkout?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {  }
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          handler: () => { this.router.navigateByUrl('checkout') }
+        }
+      ]
+    });
+
+    await alert.present();
+
+    // const { role } = await alert.onDidDismiss();
+    // this.roleMessage = `Dismissed with role: ${role}`;
+  }
 }

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="['/cart']">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-text><h5>Checkout</h5></ion-text>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="order-summary">
+    <ion-card-title>
+      <h5>Order Summary</h5>
+    </ion-card-title>
+    <ion-card-content>
+      <div class="order-items">
+        <p class="order-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="shipping-address">
+    <ion-card-title>
+      <h5>Shipping Address</h5>
+    </ion-card-title>
+    <ion-card-content>
+      123, George W. Road, Hawkins Town USA, 100024
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="shipping-address">
+    <ion-card-title>
+      <h5>Payment Options</h5>
+    </ion-card-title>
+    <ion-card-content>
+      <ion-radio-group>
+        <ion-item lines="none">
+          <ion-label>Cash On Delivery</ion-label>
+          <ion-radio value="cod" ></ion-radio>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Online Banking</ion-label>
+          <ion-radio value="banking"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block">Payment</ion-button>
+</ion-content>

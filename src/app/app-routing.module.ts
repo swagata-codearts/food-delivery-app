@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'add-address',
     loadChildren: () => import('./add-address/add-address.module').then( m => m.AddAddressPageModule)
   },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
+  },
 
 
   

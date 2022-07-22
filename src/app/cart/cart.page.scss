@@ -1,65 +1,77 @@
-ion-content{
-    ion-list{
+ion-content {
+    ion-list {
 
-        &.cart-card{
+        &.cart-card {
             display: flex;
             align-items: center;
-            .cart-card-item{
+
+            .cart-card-item {
                 flex: 1 1 33.33%;
             }
-            .cart-product-name-value{
+
+            .cart-product-name-value {
                 display: flex;
                 justify-content: center;
-                .product-count-number{
+
+                .product-count-number {
                     margin: 0 10px;
                 }
-                ion-buttons{
-                    ion-button{
+
+                ion-buttons {
+                    ion-button {
                         background-color: var(--ion-color-primary);
                         border-radius: 50%;
                         height: 28px;
                         width: 28px;
-                        &::part(native){
+
+                        &::part(native) {
                             border-radius: 50%;
                         }
-                        ion-icon{
+
+                        ion-icon {
                             font-size: 60px;
                         }
-                        
+
                     }
                 }
             }
-            .cart-product-total-vale-single{
+
+            .cart-product-total-vale-single {
                 display: flex;
                 justify-content: end;
             }
-            .cart-product-img{
-                img{
+
+            .cart-product-img {
+                img {
                     width: 52px;
-                height: 55px;
-                object-fit: cover;
+                    height: 55px;
+                    object-fit: cover;
                 }
-                
-            } 
+
+            }
 
         }
-               
-        
-        
+
+
+
     }
-    .custom-cart-total{
+
+    .custom-cart-total {
         position: fixed;
         width: 100%;
         bottom: 70px;
-        .total-ammount{
+
+        .total-ammount {
             text-align: right;
-            
+
         }
-        .custom-delivery-select{
-            ion-list{
-                ion-item{
+
+        .custom-delivery-select {
+            ion-list {
+                ion-item {
                     float: right;
-                    &::part(native){
+
+                    &::part(native) {
                         min-height: 20px;
                         height: 20px;
                         border-bottom: 0;
@@ -68,22 +80,27 @@ ion-content{
             }
         }
     }
-    .custom-cart-btns{
+
+    .custom-cart-btns {
         width: 100%;
     }
-    
+
 }
+
 ion-modal {
-    --height: 50%;
+    --height: 170px;
     --border-radius: 16px;
     --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     padding: 0 10px;
-  }
-  ion-modal::part(backdrop) {
+    margin-top: 100px !important;
+}
+
+ion-modal::part(backdrop) {
     background: rgba(209, 213, 219);
     opacity: 1;
-  }
-  ion-modal ion-toolbar {
+}
+
+ion-modal ion-toolbar {
     --background: var(--ion-color-primary);
     --color: white;
-  }
+}
