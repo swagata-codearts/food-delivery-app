@@ -12,6 +12,20 @@
 <ion-content>
   <ion-card class="order-summary">
     <ion-card-title>
+      <h5>User Details</h5>
+    </ion-card-title>
+    <ion-card-content>
+      <form class="checkout-user-details">
+        <ion-input type="text" placeholder="Name"></ion-input>
+        <ion-input type="tel" placeholder="Mobile No."></ion-input>
+        <ion-input type="email" placeholder="Email Id"></ion-input>
+        <ion-button>Save</ion-button>
+      </form>
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="order-summary">
+    <ion-card-title>
       <h5>Order Summary</h5>
     </ion-card-title>
     <ion-card-content>
@@ -28,7 +42,7 @@
       123, George W. Road, Hawkins Town USA, 100024
     </ion-card-content>
   </ion-card>
-  <ion-card class="shipping-address">
+  <!-- <ion-card class="payment-options">
     <ion-card-title>
       <h5>Payment Options</h5>
     </ion-card-title>
@@ -36,7 +50,7 @@
       <ion-radio-group>
         <ion-item lines="none">
           <ion-label>Cash On Delivery</ion-label>
-          <ion-radio value="cod" ></ion-radio>
+          <ion-radio value="cod" checked></ion-radio>
         </ion-item>
         <ion-item lines="none">
           <ion-label>Online Banking</ion-label>
@@ -44,6 +58,6 @@
         </ion-item>
       </ion-radio-group>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
   <ion-button expand="block">Payment</ion-button>
 </ion-content>

@@ -11,9 +11,18 @@ ion-content {
             margin: 0;
         }
     }
-    
+
     & ion-card-content {
         padding: 10px 15px 15px;
         font-size: 12px;
+
+        & .checkout-user-details    {
+
+            & ion-input {
+                --background: #f4f4f4;
+                margin: 5px 0;
+                border-radius: 5px;
+            }
+        }
     }
 }
